@@ -1,3 +1,5 @@
+@font-face { font-family: Norse-Bold; font-weight: bold; src: url('Norse-Bold.otf');}
+
 .container {
     height:100vh;
     width: 100vw;
@@ -6,18 +8,68 @@
 
 .leftPanel {
     background-color: blue;
-    flex-basis: 34%;
+    width: 40vw;
+}
+
+.leftPanel > img {
+    position: absolute;
+    height:100%;
+    width: 40vw;
 }
 
 .rightPanel {
     background-color: violet;
-    flex-basis: 66%;
+    flex-basis: 60%;
+    --width: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
-    position: relative;
-    top: 200px;
-    background-color: red;
+    font-family: 'Norse-bold';
+
+    margin-top: 15vh;
     height: 10rem;
     width: 100%;
+
+    background-color: black;
+    opacity: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > img {
+    height: min(120px, 100%);
+    width: auto;
+    position: relative;
+}
+
+.logo > p {
+    color: white;
+    font-size: 100px;
+}
+
+.header {
+    background-color: aquamarine;
+    width: var(--width);
+    height: 30vh;
+}
+
+fieldset {
+    background-color:burlywood;
+    height: 34vh;
+    width: var(--width);
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
+.singleForm {
+    margin-left: 5rem;
+
 }
