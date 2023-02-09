@@ -1,24 +1,30 @@
-@font-face { font-family: Norse-Bold; font-weight: bold; src: url('Norse-Bold.otf');}
+@font-face { 
+    font-family: Norse-Bold; 
+    font-weight: bold; 
+    src: url('Norse-Bold.otf');
+}
 
 .container {
-    height:100vh;
-    width: 100vw;
     display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .leftPanel {
     background-color: blue;
-    width: 40vw;
+    width: 40%;
 }
 
 .leftPanel > img {
-    position: absolute;
+    position: fixed;
     height:100%;
-    width: 40vw;
+    width: 40%;
 }
 
 .rightPanel {
-    background-color: violet;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F7F7F9;
     flex-basis: 60%;
     --width: 100%;
 
@@ -26,15 +32,17 @@
     flex-direction: column;
 }
 
+/* LEFT PANEL */
+
 .logo {
+    position: absolute;
     font-family: 'Norse-bold';
 
-    margin-top: 15vh;
+    margin-top: 10rem;
     height: 10rem;
-    width: 100%;
+    width: 40vw;
 
-    background-color: black;
-    opacity: 80%;
+    background-color: rgba(0, 0, 0, 0.57);
 
     display: flex;
     justify-content: center;
@@ -48,28 +56,84 @@
 }
 
 .logo > p {
-    color: white;
+    color: #fcfcfc;
     font-size: 100px;
 }
 
+/* TOP PANEL */
+
 .header {
-    background-color: aquamarine;
     width: var(--width);
-    height: 30vh;
+    height: 20rem;
 }
 
-fieldset {
-    background-color:burlywood;
-    height: 34vh;
+.header > p {
+    position: relative;
+    line-height: 25px;
+    top: 150px;
+    left: 80px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+em {font-style: italic;}
+
+/* MIDDLE PANEL */
+
+.midPanel {
+    background-color:#fcfcfc;
+    height: 17rem;
     width: var(--width);
 
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    row-gap: 2rem;
+
+    box-shadow: 0 4px .4rem #cecfd3;
 }
 
-.singleForm {
+fieldset {
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+
+legend {
+    padding-top: 15px;
+}
+
+.singleForm, legend {
+    margin-left: 5rem;
+}
+
+/* BOTTOM PANEL */
+
+.bottomPanel > button {
+    margin-top: 3rem;
     margin-left: 5rem;
 
+    width: 16rem;
+    height: 4rem;
+    box-shadow: 3px 5px .2rem #cfcfd4;
+
+    border: 0px solid #596D48;
+    border-radius: 8px;
+
+    background-color: #596D48;
+    color:#fcfcfc;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.bottomPanel > p {
+    margin-top: 2rem;
+    margin-left: 5rem;
+
+}
+
+.bottomPanel > p > a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #596D48;
 }
