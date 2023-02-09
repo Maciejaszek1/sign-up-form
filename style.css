@@ -82,7 +82,7 @@ em {font-style: italic;}
 
 .midPanel {
     background-color:#fcfcfc;
-    height: 17rem;
+    height: 20rem;
     width: var(--width);
 
     display: flex;
@@ -91,7 +91,7 @@ em {font-style: italic;}
 }
 
 fieldset {
-    flex-basis: 60%;
+    flex-basis: clamp(40rem, 70% , 30rem);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -100,11 +100,40 @@ fieldset {
 }
 
 legend {
+    font-size: 28px;
+    font-weight: 700;
     padding-top: 15px;
 }
 
 .singleForm, legend {
     margin-left: 5rem;
+}
+
+.singleForm {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #444546;
+}
+
+input {
+    height: 1.5rem;
+    width: 14rem;
+    margin-top: 2px;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #005CB7;
+    box-shadow: 2px 4px .4rem #cecfd3;
+
+}
+
+#pwd, #confirm_pwd {
+    margin-bottom: 2rem;
 }
 
 /* BOTTOM PANEL */
