@@ -17,7 +17,7 @@
             <div class = "logo">
                 <img src="odin-lined.png"> <p>Odin</p>
             </div>
-            
+            <p>Photo by <a href="https://unsplash.com/photos/bTzpau9mKT4">Halie West</a> on <a href="https://unsplash.com/">Unsplash.com</a></p>
         </div>
         <div class="rightPanel">
             <div class="header">
@@ -32,30 +32,31 @@
                     <legend>Let's do this!</legend>
                     <div class = singleForm>
                         <label for="first_name">First Name</label> <br>
-                        <input type="text" id="first_name" name="first_name">
+                        <input type="text" id="first_name" name="first_name" required>
                     </div>
                 
                     <div class = singleForm>
                         <label for="last_name">Last Name</label> <br>
-                        <input type="text" id="last_name" name="last_name">
+                        <input type="text" id="last_name" name="last_name" required>
                     </div>
                     <div class = singleForm>
                         <label for="email">Email</label> <br>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
                 
                     <div class = singleForm>
                         <label for="phone_number">Phone Number</label> <br>
-                        <input type="tel" id="phone_number" name="phone_number">
+                        <input type="tel" id="phone_number" name="phone_number" required>
                     </div>
                     <div class = singleForm>
                         <label for="">Password</label> <br>
-                        <input type="password" id="pwd" name="pwd" required>
+                        <input class = "error" type="password" id="pwd" name="pwd" required>
+                        <p>*Passwords do not match</p>
                     </div>
                 
                     <div class = singleForm>
                         <label for="phone_number">Confirm Password</label> <br>
-                        <input type="password" id="confirm_pwd" name="confirm_pwd">
+                        <input class = "error" type="password" id="confirm_pwd" name="confirm_pwd" required>
                     </div>
                 </fieldset>
             </div>
